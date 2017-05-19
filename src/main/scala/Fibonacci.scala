@@ -1,7 +1,5 @@
 object Fibonacci {
 
-  val printer = new Printer;
-
   def fibonaci(num:Integer): Array[Integer] = {
     val fibo = new Array[Integer](num)
     for (i <- 0 to num -1) {
@@ -12,8 +10,10 @@ object Fibonacci {
 
   def main(args: Array[String]) {
     val fibo = fibonaci(6)
-    printer.print("\n", fibo);
-    printer.printInline(fibo, fibo.length);
+    val printer = new Printer
+
+    printer.print("\n", fibo)
+    printer.printInline(fibo, fibo.length)
   }
 
 }
